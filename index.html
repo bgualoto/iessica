@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Video</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* HEADER */
+    header{
+      height:60px;
+      background:#181818;
+      display:flex;
+      align-items:center;
+      padding:0 25px;
+      border-bottom:1px solid #2a2a2a;
+    }
+
+    .logo{
+      color:#ff0000;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .logo span{
+      color:white;
+    }
+
+    /* MAIN */
+    main{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .video-container{
+      width:100%;
+      max-width:1200px;
+      background:#000;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    video{
+      width:100%;
+      height:auto;
+      display:block;
+      background:black;
+    }
+
+    .video-info{
+      padding:20px;
+      background:#181818;
+    }
+
+    .video-title{
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    .video-description{
+      color:#b3b3b3;
+      line-height:1.5;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .video-title{
+        font-size:18px;
+      }
+
+      header{
+        padding:0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">iessica<span>Tube</span></div>
+  </header>
+
+  <main>
+    <div class="video-container">
+
+      <!-- TU VIDEO -->
+      <video controls autoplay>
+        <source src="cuatroam.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+      <div class="video-info">
+        <div class="video-title">02 - Free Stayla Ft. Brian G - 4:00 am - Original Kush (X1994X)</div>
+        <div class="video-description">
+          04/06/2026
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
