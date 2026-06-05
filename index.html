@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Video</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iessicaTube</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -22,6 +23,7 @@
     }
 
     /* HEADER */
+
     header{
       height:60px;
       background:#181818;
@@ -42,6 +44,7 @@
     }
 
     /* MAIN */
+
     main{
       flex:1;
       display:flex;
@@ -81,8 +84,35 @@
       line-height:1.5;
     }
 
+    /* BOTON DESCARGA */
+
+    .download-container{
+      padding:25px;
+      text-align:center;
+      background:#181818;
+    }
+
+    .download-btn{
+      background:#ff0000;
+      color:white;
+      border:none;
+      padding:15px 30px;
+      font-size:18px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .download-btn:hover{
+      transform:scale(1.05);
+      opacity:0.9;
+    }
+
     /* RESPONSIVE */
+
     @media(max-width:768px){
+
       .video-title{
         font-size:18px;
       }
@@ -90,9 +120,16 @@
       header{
         padding:0 15px;
       }
+
+      .download-btn{
+        width:100%;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
 
   <header>
@@ -100,22 +137,50 @@
   </header>
 
   <main>
+
     <div class="video-container">
 
-      <!-- TU VIDEO -->
-      <video controls autoplay>
+      <!-- VIDEO -->
+
+      <video
+        controls
+        autoplay
+        playsinline
+        webkit-playsinline
+      >
         <source src="cuatroam.mp4" type="video/mp4">
+
         Tu navegador no soporta videos HTML5.
       </video>
 
+      <!-- INFO -->
+
       <div class="video-info">
-        <div class="video-title">02 - Free Stayla Ft. Brian G - 4:00 am - Original Kush (X1994X)</div>
+
+        <div class="video-title">
+          02 - Free Stayla Ft. Brian G - 4:00 am - Original Kush (X1994X)
+        </div>
+
         <div class="video-description">
           04/06/2026
         </div>
+
+      </div>
+
+      <!-- DESCARGAR -->
+
+      <div class="download-container">
+
+        <a href="cuatroam.mp4" download>
+          <button class="download-btn">
+            Descargar Video
+          </button>
+        </a>
+
       </div>
 
     </div>
+
   </main>
 
 </body>
