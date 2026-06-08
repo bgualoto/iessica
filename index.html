@@ -1,146 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iessicaTube</title>
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body{
-      background:#0f0f0f;
-      color:white;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
+    body {
+      background: #0f0f0f;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* HEADER */
 
-    header{
-      height:60px;
-      background:#181818;
-      display:flex;
-      align-items:center;
-      padding:0 25px;
-      border-bottom:1px solid #2a2a2a;
+    header {
+      height: 60px;
+      background: #181818;
+      display: flex;
+      align-items: center;
+      padding: 0 25px;
+      border-bottom: 1px solid #2a2a2a;
     }
 
-    .logo{
-      color:#ff0000;
-      font-size:28px;
-      font-weight:bold;
+    .logo {
+      color: #ff0000;
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    .logo span{
-      color:white;
+    .logo span {
+      color: white;
     }
 
     /* MAIN */
 
-    main{
-      flex:1;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:40px 20px;
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
 
-    .video-container{
-      width:100%;
-      max-width:1200px;
-      background:#000;
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    .video-container {
+      width: 100%;
+      max-width: 1200px;
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    video{
-      width:100%;
-      height:auto;
-      display:block;
-      background:black;
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: black;
     }
 
-    .video-info{
-      padding:20px;
-      background:#181818;
+    .video-info {
+      padding: 20px;
+      background: #181818;
     }
 
-    .video-title{
-      font-size:24px;
-      margin-bottom:10px;
+    .video-title {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    .video-description{
-      color:#b3b3b3;
-      line-height:1.5;
+    .video-description {
+      color: #b3b3b3;
+      line-height: 1.5;
     }
 
     /* BOTON DESCARGA */
 
-    .download-container{
-      padding:25px;
-      text-align:center;
-      background:#181818;
+    .download-container {
+      padding: 25px;
+      text-align: center;
+      background: #181818;
     }
 
-    .download-btn{
-      background:#ff0000;
-      color:white;
-      border:none;
-      padding:15px 30px;
-      font-size:18px;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:bold;
-      transition:0.3s;
+    .download-btn {
+      background: #ff0000;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    .download-btn:hover{
-      transform:scale(1.05);
-      opacity:0.9;
+    .download-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
     /* RESPONSIVE */
 
-    @media(max-width:768px){
+    @media(max-width:768px) {
 
-      .video-title{
-        font-size:18px;
+      .video-title {
+        font-size: 18px;
       }
 
-      header{
-        padding:0 15px;
+      header {
+        padding: 0 15px;
       }
 
-      .download-btn{
-        width:100%;
+      .download-btn {
+        width: 100%;
       }
 
     }
-    /* BANNER */ 
-    .banner-container{ 
-        width:100%; 
-        text-align:center; 
-        background:#181818; 
-        padding:30px 20px 10px 20px; 
-    } 
-    
-    .banner-image{ 
-        max-width:300px; 
-        width:100%; 
-        height:auto; 
-        border-radius:16px; 
+
+    /* BANNER */
+    .banner-container {
+      width: 100%;
+      text-align: center;
+      background: #181818;
+      padding: 30px 20px 10px 20px;
     }
 
+    .banner-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .romantic-section {
+      width: 100%;
+      background: #181818;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .romantic-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .romantic-gallery img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+
+    .romantic-gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .romantic-text {
+      max-width: 900px;
+      margin: auto;
+      color: white;
+      font-size: 22px;
+      line-height: 1.8;
+      padding: 0 15px;
+    }
+
+    .romantic-text span {
+      color: #ff8080;
+      font-weight: bold;
+    }
+
+    @media(max-width:768px) {
+
+      .romantic-text {
+        font-size: 18px;
+      }
+
+    }
   </style>
 </head>
 
@@ -153,17 +202,62 @@
   <main>
 
     <div class="video-container">
-        <!-- IMAGEN --> <div class="banner-container"> 
-            <img src="cuatroam.jpeg" alt="Banner" class="banner-image" > </div>
+
+      <!-- ROMANTIC SECTION -->
+      <div class="romantic-section">
+
+        <div class="romantic-gallery">
+
+          <img src="amanecer1.jpeg" alt="Amanecer 1">
+          <img src="amanecer2.jpeg" alt="Amanecer 2">
+          <img src="amanecer3.jpeg" alt="Amanecer 3">
+
+        </div>
+
+        <div class="romantic-text">
+
+          🌅 Cada vez que veo un amanecer o un atardecer pienso en ti...
+
+          <br><br>
+
+          Hay personas que pasan por la vida...
+          y hay otras que se quedan en el alma.
+          Tú eres de esas personas que convierten cualquier instante
+          en un recuerdo bonito.
+
+          <br><br>
+
+          Espero que este pequeño detalle te saque una sonrisa,
+          te acompañe esta mañana
+          y te recuerde lo increíble que eres ✨❤️
+
+          <br><br>
+
+          <span>Buenos días alegría ☀️</span>
+
+        </div>
+
+      </div>
 
       <!-- VIDEO -->
 
-      <video
-        controls
-        autoplay
-        playsinline
-        webkit-playsinline
-      >
+      <video controls autoplay playsinline webkit-playsinline>
+        <source src="buenosdiasalegria.mp4" type="video/mp4">
+
+        Tu navegador no soporta videos HTML5.
+      </video>
+      <div class="video-title">
+          Juan Gabriel - Buenos Días Señor Sol
+        </div>
+
+
+      <!-- VIDEO -->
+      <!-- IMAGEN -->
+      <div class="banner-container">
+        <img src="cuatroam.jpeg" alt="Banner" class="banner-image">
+      </div>
+
+      <video controls playsinline webkit-playsinline>
         <source src="cuatroam.mp4" type="video/mp4">
 
         Tu navegador no soporta videos HTML5.
@@ -177,17 +271,17 @@
           02 - Free Stayla Ft. Brian G - 4:00 am - Original Kush (X1994X)
         </div>
 
-        <div class="video-description"> 
-            Reproducción online estilo streaming. 
-            <br><br> 
-            🎬 Video original: 02 - Free Stayla - 4:00 am - Original Kush (X1994X)
-                <a href="https://youtu.be/DB0ipj094X8?si=Zn-dHepyMBHbHeh0" target="_blank" style="color:#3ea6ff;"> 
-                Ver aquí 
-                </a> 
-                <br><br> 
-            🎸 Video acústico: Free Stayla - 4:00 am - ( Video Oficial)
-                <a href="https://youtu.be/Kib-TBevPW4?si=cYWF4AHln4Hj5DR0" target="_blank" style="color:#3ea6ff;"> 
-                Ver aquí </a> 
+        <div class="video-description">
+          Reproducción online estilo streaming.
+          <br><br>
+          🎬 Video original: 02 - Free Stayla - 4:00 am - Original Kush (X1994X)
+          <a href="https://youtu.be/DB0ipj094X8?si=Zn-dHepyMBHbHeh0" target="_blank" style="color:#3ea6ff;">
+            Ver aquí
+          </a>
+          <br><br>
+          🎸 Video acústico: Free Stayla - 4:00 am - ( Video Oficial)
+          <a href="https://youtu.be/Kib-TBevPW4?si=cYWF4AHln4Hj5DR0" target="_blank" style="color:#3ea6ff;">
+            Ver aquí </a>
         </div>
 
       </div>
@@ -209,4 +303,5 @@
   </main>
 
 </body>
+
 </html>
