@@ -190,6 +190,53 @@
       }
 
     }
+
+    .daily-message {
+      width: 100%;
+      background: #181818;
+      padding: 50px 25px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .daily-date {
+      font-size: 33px;
+      color: #ff8080;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .daily-title {
+      font-size: 42px;
+      margin-bottom: 35px;
+      color: white;
+    }
+
+    .daily-text {
+      max-width: 900px;
+      margin: auto;
+      color: #e0e0e0;
+      font-size: 22px;
+      line-height: 1.9;
+    }
+
+    .daily-text span {
+      color: #ffb3b3;
+      font-weight: bold;
+    }
+
+    @media(max-width:768px) {
+
+      .daily-title {
+        font-size: 28px;
+      }
+
+      .daily-text {
+        font-size: 18px;
+      }
+
+    }
   </style>
 </head>
 
@@ -200,8 +247,58 @@
   </header>
 
   <main>
-
     <div class="video-container">
+      <!-- DAILY MESSAGE -->
+
+      <div class="daily-message">
+
+        <div class="daily-date">
+          09 DE JUNIO 2026
+        </div>
+
+        <div class="daily-title">
+          ✨ Para ti ✨
+        </div>
+
+        <div class="daily-text">
+
+          En este momento estamos pasando por un proceso difícil...
+
+          <br><br>
+
+          Quisiera escribirte,
+          pero siento que quizá te estoy abrumando con tantos mensajes.
+
+          <br><br>
+
+          Por eso,
+          este será mi pequeño espacio para expresarte lo que siento por ti
+          y para que sepas que cada día pienso en ti ❤️
+
+          <br><br>
+
+          A veces las palabras no alcanzan,
+          pero aun así quiero que recuerdes algo importante:
+
+          <br><br>
+
+          <span>
+            hoy es un día maravilloso ✨
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- VIDEO -->
+
+      <video controls autoplay playsinline webkit-playsinline>
+        <source src="comoquienpierdeunaestrella.mp4" type="video/mp4">
+
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+
 
       <!-- ROMANTIC SECTION -->
       <div class="romantic-section">
@@ -241,14 +338,14 @@
 
       <!-- VIDEO -->
 
-      <video controls autoplay playsinline webkit-playsinline>
+      <video controls playsinline webkit-playsinline>
         <source src="buenosdiasalegria.mp4" type="video/mp4">
 
         Tu navegador no soporta videos HTML5.
       </video>
       <div class="video-title">
-          Juan Gabriel - Buenos Días Señor Sol
-        </div>
+        Juan Gabriel - Buenos Días Señor Sol
+      </div>
 
 
       <!-- VIDEO -->
